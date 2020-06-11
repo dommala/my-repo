@@ -10,7 +10,7 @@ public class BankDao implements Common {
     public void savaData(BankModel bankPojoClass) {
         Connection connection = null;
 
-
+	//Mani[iulating a Conflict
         try {
             Class.forName(driver);
             connection = DriverManager.getConnection(url, user, password);
