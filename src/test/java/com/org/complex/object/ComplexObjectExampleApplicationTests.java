@@ -5,7 +5,6 @@ import com.org.complex.object.service.EmployeeService;
 import org.junit.*;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -17,15 +16,6 @@ import java.util.Optional;
 @RunWith(SpringRunner.class)
 class ComplexObjectExampleApplicationTests {
 
-   /* 	@BeforeClass
-	public void  initSetData(){
-		System.out.println("Before Test Case");
-	}
-
-	@AfterClass
-   public void cleanUpData(){
-		System.out.println("After Test Case");
-	}*/
 
     @Autowired
     EmployeeService employeeService;
@@ -34,13 +24,13 @@ class ComplexObjectExampleApplicationTests {
     public void init() {
         Data data = new Data();
         data.setId(80);
-        Employee employee=new Employee();
+        Employee employee = new Employee();
         employee.setName("naidu");
-        Address address=new Address();
-        PermanentAddress permanentAddress=new PermanentAddress();
+        Address address = new Address();
+        PermanentAddress permanentAddress = new PermanentAddress();
         permanentAddress.setCity("banglore");
         address.setPermanentAddress(permanentAddress);
-        CurrentAddress currentAddress=new CurrentAddress();
+        CurrentAddress currentAddress = new CurrentAddress();
         currentAddress.setcCity("punganur");
         address.setCurrentAddress(currentAddress);
         employee.setAddress(address);
